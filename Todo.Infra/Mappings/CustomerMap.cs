@@ -13,7 +13,7 @@ namespace Todo.Infra.Mappings
         public CustomerMap()
         {
             HasKey(x => x.Id);
-            Property(x => x.Name).HasMaxLength(80);
+            Property(x => x.Name).HasMaxLength(80).IsRequired();
             HasMany(x => x.Items);
         }
     }
